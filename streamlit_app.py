@@ -16,7 +16,7 @@ if not gemini_api_key:
 else:
     # Set API key for Google Generative AI
     genai.configure(api_key=gemini_api_key)
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-2.5-pro")
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
