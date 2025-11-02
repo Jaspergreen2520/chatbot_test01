@@ -48,7 +48,12 @@ else:
             prompt,
             generation_config={"max_output_tokens": 2048},
             stream=True,
-            safety_settings=[{"category": "HARM_CATEGORY_DEROGATORY", "threshold": "BLOCK_NONE"}],
+            safety_settings=[
+                {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                {"category": "HARM_CATEGORY_SEXUAL", "threshold": "BLOCK_NONE"},
+                {"category": "HARM_CATEGORY_DANGEROUS", "threshold": "BLOCK_NONE"},
+            ],
             # Optionally add context/history if you want multi-turn
         )
 
